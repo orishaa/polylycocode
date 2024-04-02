@@ -1,0 +1,14 @@
+.learning {
+    width: 1200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    row-gap: 25px;
+    padding-bottom: 50px;
+}
+
+.learning__title {
+    font-size: 36px;
+    width: 100%;
+}

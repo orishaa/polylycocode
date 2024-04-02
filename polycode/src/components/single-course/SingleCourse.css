@@ -1,0 +1,98 @@
+.singlecourse {
+    width: 1200px;
+    height: 500px;
+}
+
+.singlecourse__title {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.singlecourse__rating {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.singlecourse__description {
+    line-height: 1.5;
+    max-width: 800px;
+    padding-bottom: 20px;
+}
+
+.singlecourse__users {
+    padding-bottom: 30px;
+}
+
+.singlecourse__button {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #B1D4E5;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.singlecourse__button:hover {
+    background-color: #589FC2;
+}
+
+.singlecourse__button:hover .right-arrow {
+    transform: translateX(5px);
+}
+
+.hearth {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.singlecouse__interaction {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 100px;
+}
+
+.singlecourse__reviews--title {
+    font-size: 36px;
+}
+
+.singlecourse__inside {
+    padding-bottom: 5px;
+}
+
+.singlecourse__inside--list {
+    padding-bottom: 20px;
+}
+
+.singlecourse__filling {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.singlecourse__fill {
+    width: 150px;
+    height: 50px;
+    background-color: #B1D4E5;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.right-arrow {
+    width: 25px;
+    height: 25px;
+    transition: .3s;
+}

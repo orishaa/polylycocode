@@ -1,0 +1,48 @@
+.user {
+    width: 235px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.user__photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.user__name {
+    font-size: 20px;
+}
+
+.user__button {
+    width: 200px;
+    height: 45px;
+    background-color: #B1D4E5;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.user__button:hover {
+    background-color: #589FC2;
+}
+
+.user__status {
+    font-size: 16px;
+}
+
+.user__date {
+    font-size: 15px;
+    font-weight: 300;
+}

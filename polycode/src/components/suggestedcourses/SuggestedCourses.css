@@ -1,0 +1,80 @@
+.suggestedcourses {
+    width: 575px;
+    height: auto;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+
+.suggestedcourses__title {
+    font-weight: 500;
+}
+
+.suggestedcourses__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.suggestedcourses__item {
+    width: 525px;
+    height: 85px;
+    background-color: rgba(217,217,217,0.5);
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.suggestedcourses__item--left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestedcourses__item--right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+    align-items: end;
+}
+
+.suggestedcourses__about {
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.suggestedcourses__about:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.suggestedcourses__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sugeestedcourses__allcourses {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.sugeestedcourses__allcourses:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.suggestedcourses__rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.star {
+    width: 19px;
+    height: 19px;
+}

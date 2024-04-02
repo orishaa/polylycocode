@@ -1,0 +1,45 @@
+.courses {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.courses__title {
+    font-size: 36px;
+    padding-bottom: 30px;
+}
+
+.courses__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.courses__item {
+    width: 650px;
+    height: 85px;
+    background-color: rgba(217,217,217,0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.courses__item:hover {
+    background-color: #B1D4E5;
+}
+
+.courses__item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.courses__item-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
