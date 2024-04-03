@@ -10,6 +10,7 @@ import Profile from './pages/profile/Profile';
 import Learning from './pages/learning/Learning';
 import SingleCourse from './components/single-course/SingleCourse';
 import CoursePage from './components/coursepage/CoursePage';
+import AllCourses from './pages/allcourses/AllCourses';
 
 
 import './App.css';
@@ -25,9 +26,10 @@ function App() {
     <Route path="/profile" element={<Profile />} />
     <Route path="/learning" element={<Learning />} />
     <Route path="/course/:id" element={<SingleCourse />} />
-      <Route path="/coursepage/:id" element={<CoursePage />}>
+    <Route path="/allcourses" element={<SingleCourse />} />
+    <Route path="/coursepage/:id" element={<CoursePage />} />
         
-      </Route>
+      
    </Routes>
    <Footer />
    </Router>

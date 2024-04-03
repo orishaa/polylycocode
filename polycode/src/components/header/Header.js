@@ -5,7 +5,7 @@ import './Header.css';
 
 const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userData, setUserData] = useState(null); // Создаем состояние для хранения данных о пользователе
+    const [userData, setUserData] = useState(null); 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,14 +19,13 @@ const Header = () => {
                         'Authorization': `Bearer ${token}`
                     }
                 });
-                console.log(response.data);
-                setUserData(response.data); // Сохраняем данные о пользователе в состояние
-                setIsLoggedIn(true); // Устанавливаем флаг входа в систему
+                setUserData(response.data); 
+                setIsLoggedIn(true); 
             } catch (error) {
                 console.error('Ошибка при получении данных:', error);
             }
         };
-        fetchData(); // Вызываем fetchData при монтировании компонента
+        fetchData(); 
     }, []);
 
     return (

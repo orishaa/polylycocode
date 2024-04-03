@@ -10,7 +10,8 @@ export const register = async (req, res) => {
             lastname: req.body.lastname,
             patronymic: req.body.patronymic,
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            achievements: req.body.achievements,
         });
 
         const user = await doc.save();
