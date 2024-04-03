@@ -1,5 +1,6 @@
 .coursepage {
     width: 1200px;
+    min-height: 500px;
     height: auto;
     padding-bottom: 50px;
 }
@@ -27,11 +28,18 @@
     padding-bottom: 30px;
 }
 
+.coursepage__task {
+    width: 550px;
+}
+
 .coursepage__task-container {
     margin-top: 30px;
+    display: flex;
+    gap: 100px;
 }
 
 .coursepage__task--title {
+    max-width: 350px;
     padding-bottom: 10px;
 }
 
@@ -99,4 +107,17 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.coursepage__task--help {
+    width: 500px;
+    height: auto;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #B1D4E5;
+}
+
+.help-text {
+    line-height: 1.5;
+    white-space: pre-line;
 }

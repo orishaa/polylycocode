@@ -24,6 +24,8 @@ const Login = () => {
             });
             console.log('Ответ из базы данных:', response.data);
             setSuccessLogin(true);
+            const token = response.data.token;
+            localStorage.setItem('token', token);
 
             setTimeout(() => {
                 setSuccessLogin(false);

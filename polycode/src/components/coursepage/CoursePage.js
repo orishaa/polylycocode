@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { UserCourses, updateUserCourses } from "../courses/UserCourses";
 
@@ -10,13 +10,22 @@ const CoursePage = () => {
     const [selectedTask, setSelectedTask] = useState(null);
     const [completedTasks, setCompletedTasks] = useState([]);
 
+    useEffect(() => {
+        const selectedTaskFromStorage = localStorage.getItem("selectedTask");
+        if (selectedTaskFromStorage !== null) {
+            setSelectedTask(parseInt(selectedTaskFromStorage));
+        }
+    }, []);
+
     const handleTaskClick = (taskId) => {
         setSelectedTask(taskId);
+        localStorage.setItem("selectedTask", taskId);
     };
 
     const handleNextTask = () => {
         if (selectedTask !== null && selectedTask < course.tasks.length - 1) {
             setSelectedTask(selectedTask + 1);
+            localStorage.setItem("selectedTask", selectedTask + 1);
         }
     };
 
@@ -35,6 +44,7 @@ const CoursePage = () => {
         if (selectedTask !== null) {
             const task = course.tasks[selectedTask];
             return (
+                <>
                 <div className="coursepage__task">
                     <h2 className="coursepage__task--title">{`Задание №${task.id}`}</h2>
                     <p className="coursepage__description">{task.condition}</p>
@@ -48,12 +58,19 @@ const CoursePage = () => {
                         </div>
                     </form>
                 </div>
+                <div className="coursepage__task--help">
+                    <h2 className="coursepage__task--title">{task.title}</h2>
+                    <p className="help-text">{task.help_text}</p>
+                </div>
+                </>
             );
         }
         return (
             <>
+            <div>
                 <div className="coursepage__description">{course.description}</div>
                 <button onClick={() => handleTaskClick(0)} className="coursepage__letsgo">Приступим!</button>
+                </div>
             </>
         );
     };

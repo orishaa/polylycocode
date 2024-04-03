@@ -5,11 +5,11 @@ import jwt from "jsonwebtoken";
 export const register = async (req, res) => {
     try {
         const doc = new UserModel({
-            Name: req.body.name,
-            Surname: req.body.surname,
-            MiddleName: req.body.middlename,
+            nickname: req.body.nickname,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            patronymic: req.body.patronymic,
             email: req.body.email,
-            age: req.body.age,
             password: req.body.password
         });
 
@@ -18,7 +18,7 @@ export const register = async (req, res) => {
         const token = jwt.sign({
                 _id: user._id,
             },
-            'artemiy_krutoi', {
+            'yoyo', {
                 expiresIn: '30d',
             }
         );
@@ -56,7 +56,7 @@ export const login = async (req, res) => {
         const token = jwt.sign({
                 _id: user._id,
             },
-            'artemiy_krutoi', {
+            'yoyo', {
                 expiresIn: '30d',
             }
         );
