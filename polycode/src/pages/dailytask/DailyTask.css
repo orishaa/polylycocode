@@ -1,0 +1,20 @@
+.dailytask {
+    width: 1200px;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.dailytask__title {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.dailytask__description {
+    max-width: 750px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.dailytask__score {
+    margin-top: 20px;
+}

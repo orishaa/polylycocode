@@ -1,0 +1,16 @@
+.weeklycase__data {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.weeklycase__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.weeklycase__files {
+    padding-bottom: 20px;
+}

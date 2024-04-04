@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -31,15 +31,15 @@ const Header = () => {
     return (
         <header>
             <div className='header__container'>
-                <a href="/" className='header__logo'>
+                <Link onClick={() => {window.scrollTo(0,0)}} to="/" className='header__logo'>
                     ПОЛИ<span className='text-800'>КОД</span> МИРЭА
-                </a>
+                </Link>
                 <ul className='header__navbar'>
                     <li className='navbar__item'>
-                        <a href="/" className='navbar__link'>ГЛАВНАЯ</a>
+                        <Link onClick={() => {window.scrollTo(0,0)}} to="/" className='navbar__link'>ГЛАВНАЯ</Link>
                     </li>
                     <li className='navbar__item'>
-                        <Link to="/learning" className='navbar__link'>ОБУЧЕНИЕ</Link>
+                        <Link onClick={() => {window.scrollTo(0,0)}} to="/learning" className='navbar__link'>ОБУЧЕНИЕ</Link>
                     </li>
                     <li className='navbar__item'>
                         <a href="/" className='navbar__link'>ТАБЛИЦА ЛИДЕРОВ</a>
@@ -49,8 +49,14 @@ const Header = () => {
                     </li>                    
                 </ul>
 
+                <div id="header-user" className={`header__account ${isLoggedIn ? '' : 'hidden'}`}>
+                    {isLoggedIn && userData && (
+                        <Link onClick={() => {window.scrollTo(0,0)}} to="/profile" className='account__link text-800'>{userData.firstname + " " + userData.lastname}</Link>
+                    )}
+                </div>
+
                 {!isLoggedIn && (
-                    <ul id="header-account" className='header__account'>
+                    <ul id="header-account" className={`header__account ${!isLoggedIn ? '' : 'hidden'}`}>
                         <li className='account__item account__login'>
                             <Link onClick={() => {window.scrollTo(0,0)}} to="/login" className='account__link'>ВХОД</Link>
                         </li>
@@ -59,12 +65,6 @@ const Header = () => {
                         </li>
                     </ul>
                 )}
-
-                <div id="header-user" className={`header__account ${isLoggedIn ? '' : 'hidden'}`}>
-                    {isLoggedIn && userData && (
-                        <Link to="/profile" className='account__link text-800'>{userData.firstname + " " + userData.lastname}</Link>
-                    )}
-                </div>
             </div>
         </header>
     );

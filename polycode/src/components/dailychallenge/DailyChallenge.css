@@ -31,6 +31,7 @@
 .dailychallenge__tags {
     display: flex;
     gap: 10px;
+    padding-bottom: 20px;
 }
 
 .tag {

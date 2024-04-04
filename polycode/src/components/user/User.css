@@ -46,3 +46,20 @@
     font-size: 15px;
     font-weight: 300;
 }
+
+.exit {
+    width: 180px;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #B1D4E5;
+    color: #B1D4E5;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.exit:hover {
+    background-color: #B1D4E5;
+    color: white;
+}

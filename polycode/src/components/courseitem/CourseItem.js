@@ -6,7 +6,7 @@ const CourseItem = ({id, name, level, persentage, solvedtasks}) => {
 
     return (
         <li>
-        <Link to={`/coursepage/${id}`} className='courses__item'>
+        <Link onClick={() => {window.scrollTo(0,0)}} to={`/coursepage/${id}`} className='courses__item'>
                     <div className='courses__item-left'>
                         <p className='courses__item-title text-800'>{name}</p>
                         <p className='courses__item-title'>Уровень: <span className='text-589FC2'>{level}</span></p>

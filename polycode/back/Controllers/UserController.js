@@ -10,8 +10,7 @@ export const register = async (req, res) => {
             lastname: req.body.lastname,
             patronymic: req.body.patronymic,
             email: req.body.email,
-            password: req.body.password,
-            achievements: req.body.achievements,
+            password: req.body.password
         });
 
         const user = await doc.save();
@@ -92,3 +91,29 @@ export const getInfo = async (req,res) => {
         });
     }
 };
+
+export const update = async(req, res) => {
+    try {
+        await UserModel.updateOne({
+            _id: req.userId,
+        },
+        {
+            nickname: req.body.nickname,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            patronymic: req.body.patronymic,
+            email: req.body.email,
+            password: req.body.password
+        },
+        );
+
+        res.json({
+            success: true,
+        })
+    } catch (err) {
+        res.status(500).json({
+            message: 'Не удалось обновить пользователя',
+        })
+        
+    }
+}

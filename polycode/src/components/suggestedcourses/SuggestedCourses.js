@@ -1,5 +1,7 @@
 import { CoursesList } from './CoursesList';
 
+import { Link } from 'react-router-dom';
+
 import SuggestedCourse from '../suggestedcourse/SuggestedCourse';
 
 import './SuggestedCourses.css';
@@ -10,7 +12,7 @@ const SuggestedCourses = () => {
         <div className='suggestedcourses'>
             <div className='suggestedcourses__top'>
                 <h2 className='suggestedcourses__title'>ПРЕДЛОЖЕННЫЕ КУРСЫ</h2>
-                <p className='sugeestedcourses__allcourses text-589FC2'>Все курсы</p>
+                <Link onClick={() => {window.scrollTo(0,0)}} to="/allcourses" className='sugeestedcourses__allcourses text-589FC2'>Все курсы</Link>
             </div>
             <ul className='suggestedcourses__list'>
 

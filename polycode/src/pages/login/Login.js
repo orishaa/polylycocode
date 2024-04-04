@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -10,6 +10,8 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,17 +28,13 @@ const Login = () => {
             setSuccessLogin(true);
             const token = response.data.token;
             localStorage.setItem('token', token);
+            navigate('/profile');
+            window.location.reload();
+            
 
             setTimeout(() => {
                 setSuccessLogin(false);
             }, "2000");
-
-            const HeaderLinks = document.getElementById("header-account");
-            HeaderLinks.classList.add("hidden");
-
-            const HeaderUser = document.getElementById("header-user");
-            HeaderUser.classList.remove("hidden");
-
 
         } catch (error) {
             console.error('Ошибка при отправке данных на бэкенд:', error);

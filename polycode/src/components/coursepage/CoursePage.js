@@ -15,6 +15,10 @@ const CoursePage = () => {
         if (selectedTaskFromStorage !== null) {
             setSelectedTask(parseInt(selectedTaskFromStorage));
         }
+
+        return () => {
+            localStorage.removeItem("selectedTask");
+        };
     }, []);
 
     const handleTaskClick = (taskId) => {

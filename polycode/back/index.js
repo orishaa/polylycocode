@@ -30,3 +30,4 @@ app.listen(1234, (err) => {
 app.post('/login', UserController.login);
 app.post('/register', handleValidationErrors, registerValidation, UserController.register);
 app.get('/getInfo', checkAuth, UserController.getInfo);
+app.patch('/updateMe', checkAuth, handleValidationErrors, registerValidation, UserController.update);

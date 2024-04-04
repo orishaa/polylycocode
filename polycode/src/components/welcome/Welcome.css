@@ -1,0 +1,40 @@
+.welcome {
+    width: 1200px;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.welcome__photo {
+    width: 500px;
+    border-radius: 30px;
+    pointer-events: none;
+}
+
+.welcome__title {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.welcome__text {
+    line-height: 1.5;
+}
+
+.welcome__button {
+    margin-top: 20px;
+    width:300px;
+    height: 60px;
+    background-color: #B1D4E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-size: 20px;
+}
+
+.welcome__button:hover {
+    background-color: #589FC2;
+}

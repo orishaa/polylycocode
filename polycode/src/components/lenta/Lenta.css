@@ -1,0 +1,49 @@
+.lenta {
+    width: 1200px;
+    height: auto;
+}
+
+.lenta__title {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.lenta__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.lenta__item--title {
+    font-size: 20px;
+}
+
+.lenta__item--header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #B1D4E5;
+    padding: 0 20px;
+}
+
+.lenta__item--text {
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.lenta__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.lenta__item::after {
+    content: "";
+    margin-top: 20px;
+    width: 100%;
+    height: 2px;
+    background-color:#d9d9d9;
+}
